@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/catalog.css">
+	<title>Catalog</title>
+</head>
+<body>
+	<header>
+		<div class="text1">
+			<a href="../index.html" class="standart_href"><p class="text11">Онлайн-магазин 3D-моделей</p></a>
+		</div>
+		<div class="text2">
+			<a href="../HTML/about.html" class="standart_href"><p class="text11">О компании</p></a>
+			<p class="text11">Каталог</p>
+			<a href="javascript:PopUpShow1()" class="standart_href"><p class="text11">Вход</p></a>
+			<p class="text11">||</p>
+			<a href="javascript:PopUpShow2()" class="standart_href"><p class="text11">Регистрация</p></a>
+		</div>
+	</header>
+	<div class="title_text">На данный момент в нашем магазине Вы можете приобрести следующие товары:</div>
+
+	<div class="card">
+		<div class="photo">В этом блоке располагается фотография модели</div>
+		<div class="description">В этом блоке располагается описание модели</div>
+		<div class="params">В этом блоке располагаются параметры и цена модели</div>
+	</div>
+
+
+	<div class="b-popup1" id="popup1">
+    <div class="b-popup-content1">
+    	<a href="javascript:PopUpHide1()"><img src="../Pictures/krestik.png" width="15" class="p_right" alt="Закрыть окно"></a>
+    	<form>
+    		<p class="p_center">
+    			<label>Введите логин или email</label>
+    			<br>
+    			<input class="input" type="text" name="login" id="login11" required>
+    		</p>
+    		<p class="p_center">
+    			<label>Введите пароль</label>
+    			<br>
+    			<input class="input"  type="password" name="login" id="login12" required>
+    		</p>
+    		<p class="p_center">
+    			<button type="submit" class="button2">ВОЙТИ</button>
+    		</p>
+    	</form>
+    </div>
+</div>
+
+
+<div class="b-popup2" id="popup2">
+    <div class="b-popup-content2">
+    	<a href="javascript:PopUpHide2()"><img src="../Pictures/krestik.png" width="15" class="p_right" alt="Закрыть окно"></a>
+    	<form>
+    		<p class="p_center">
+    			<label>Введите email</label>
+    			<br>
+    			<input class="input" type="text" name="login" id="login1" required>
+    		</p>
+    		<p class="p_center">
+    			<label>Придумайте логин</label>
+    			<br>
+    			<input class="input" type="text" name="login" id="login2" required>
+    		</p>
+    		<p class="p_center">
+    			<label>Придумайте пароль</label>
+    			<br>
+    			<input class="input"  type="password" name="login" id="login3" required>
+    		</p>
+    		<p class="p_center">
+    			<label>Повторите пароль</label>
+    			<br>
+    			<input class="input"  type="password" name="login" id="login4" required>
+    		</p>
+    		<p class="p_center">
+    			<button type="submit" class="button2">ЗАРЕГЕСТРИРОВАТЬСЯ</button>
+    		</p>
+    	</form>
+    </div>
+</div>
+
+
+<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+<script>
+	$(document).ready(function(){
+        //Скрыть PopUp при загрузке страницы    
+        PopUpHide1();
+        PopUpHide2();
+    });
+    //Функция отображения PopUp
+    function PopUpShow1(){
+        $("#popup1").show();
+    }
+    //Функция скрытия PopUp
+    function PopUpHide1(){
+        $("#popup1").hide();
+    }
+    function PopUpShow2(){
+        $("#popup2").show();
+    }
+    //Функция скрытия PopUp
+    function PopUpHide2(){
+        $("#popup2").hide();
+    }
+</script>
+</body>
+</html>
